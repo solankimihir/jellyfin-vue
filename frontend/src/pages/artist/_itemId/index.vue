@@ -67,13 +67,13 @@
                             >
                               {{ album.ProductionYear }}
                             </div>
-                            <nuxt-link
+                            <router-link
                               class="link font-weight-bold text-h6 text-md-h4"
                               tag="h2"
                               :to="getItemDetailsLink(album)"
                             >
                               {{ album.Name }}
-                            </nuxt-link>
+                            </router-link>
                           </v-col>
                         </v-row>
                         <v-row v-if="$vuetify.breakpoint.mdAndUp" class="my-2">
