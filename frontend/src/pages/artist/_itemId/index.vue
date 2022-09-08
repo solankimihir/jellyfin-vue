@@ -129,7 +129,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 import { mapStores } from 'pinia';
 import {
   BaseItemDto,
@@ -143,7 +143,7 @@ import { getImageInfo, getBlurhash, ImageUrlInfo } from '~/utils/images';
 import { getItemDetailsLink, isValidMD5 } from '~/utils/items';
 import { pageStore, authStore } from '~/store';
 
-export default Vue.extend({
+export default defineComponent({
   meta: {
     backdrop: true,
     transparentLayout: true

@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 import isNil from 'lodash/isNil';
 // @ts-expect-error - This module doesn't have typings
 import muxjs from 'mux.js';
@@ -69,7 +69,7 @@ declare global {
   }
 }
 
-export default Vue.extend({
+export default defineComponent({
   props: {
     stretch: {
       type: Boolean,
