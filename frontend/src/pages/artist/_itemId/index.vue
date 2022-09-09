@@ -76,7 +76,7 @@
                             </router-link>
                           </v-col>
                         </v-row>
-                        <v-row v-if="$vuetify.breakpoint.mdAndUp" class="my-2">
+                        <v-row v-if="$vuetify.display.mdAndUp" class="my-2">
                           <v-col>
                             <track-list :item="album" />
                           </v-col>
