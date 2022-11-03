@@ -53,7 +53,7 @@
               </v-col>
               <v-col class="px-0" :cols="12" :sm="10">
                 <v-slide-group>
-                  <v-slide-item
+                  <v-slide-group-item
                     v-for="(genre, index) in item.GenreItems"
                     :key="`genre-${genre.Id}`"
                   >
@@ -66,7 +66,7 @@
                     >
                       {{ genre.Name }}
                     </v-chip>
-                  </v-slide-item>
+                  </v-slide-group-item>
                 </v-slide-group>
               </v-col>
             </v-row>
@@ -83,7 +83,7 @@
               </v-col>
               <v-col class="px-0" :cols="12" :sm="10">
                 <v-slide-group>
-                  <v-slide-item
+                  <v-slide-group-item
                     v-for="director in directors"
                     :key="director.Id"
                   >
@@ -95,7 +95,7 @@
                     >
                       {{ director.Name }}
                     </v-chip>
-                  </v-slide-item>
+                  </v-slide-group-item>
                 </v-slide-group>
               </v-col>
             </v-row>
@@ -112,7 +112,10 @@
               </v-col>
               <v-col class="px-0" :cols="12" :sm="10">
                 <v-slide-group>
-                  <v-slide-item v-for="writer in writers" :key="writer.Id">
+                  <v-slide-group-item
+                    v-for="writer in writers"
+                    :key="writer.Id"
+                  >
                     <v-chip
                       small
                       link
@@ -121,7 +124,7 @@
                     >
                       {{ writer.Name }}
                     </v-chip>
-                  </v-slide-item>
+                  </v-slide-group-item>
                 </v-slide-group>
               </v-col>
             </v-row>
