@@ -7,11 +7,11 @@
         nuxt
         :to="getItemDetailsLink(item, 'Person')"
       >
-        <v-list-item-avatar>
+        <v-avatar>
           <v-avatar color="card">
             <blurhash-image :item="item" icon-size="16" />
           </v-avatar>
-        </v-list-item-avatar>
+        </v-avatar>
         <v-list-item-title>{{ item.Name }}</v-list-item-title>
         <v-list-item-subtitle>
           {{ item.Role || item.Type }}

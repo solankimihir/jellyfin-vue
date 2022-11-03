@@ -20,9 +20,9 @@
                 target="_blank"
                 rel="noopener"
               >
-                <v-list-item-avatar>
+                <v-avatar>
                   <v-icon>mdi-file</v-icon>
-                </v-list-item-avatar>
+                </v-avatar>
                 <v-list-item-title v-text="file.Name" />
                 <v-list-item-subtitle
                   v-text="getFormattedLogDate(file.DateModified)"
@@ -69,11 +69,9 @@
           >
             <v-list-item-group>
               <v-list-item v-for="activity in activityList" :key="activity.Id">
-                <v-list-item-avatar
-                  :color="getColorFromSeverity(activity.Severity)"
-                >
+                <v-avatar :color="getColorFromSeverity(activity.Severity)">
                   <v-icon dark v-text="getIconFromType(activity.Type)" />
-                </v-list-item-avatar>
+                </v-avatar>
                 <v-list-item-title v-text="activity.Name" />
                 <v-list-item-subtitle v-text="activity.ShortOverview" />
                 <v-list-item-action>

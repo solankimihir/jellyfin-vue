@@ -18,11 +18,11 @@
             nuxt
             :to="getItemDetailsLink(relatedItem)"
           >
-            <v-list-item-avatar>
+            <v-avatar>
               <v-avatar color="card">
                 <blurhash-image :item="relatedItem" icon-size="16" />
               </v-avatar>
-            </v-list-item-avatar>
+            </v-avatar>
             <v-list-item-title>{{ relatedItem.Name }}</v-list-item-title>
             <v-list-item-subtitle>
               {{ relatedItem.ProductionYear }}
