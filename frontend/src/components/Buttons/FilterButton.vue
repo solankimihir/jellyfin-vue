@@ -29,7 +29,7 @@
         <v-expansion-panel-header>{{ $t('status') }}</v-expansion-panel-header>
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
-            <v-list-item-group
+            <v-list-group
               v-model="selectedStatusFilters"
               multiple
               @change="emitFilterChange"
@@ -48,7 +48,7 @@
                   </template>
                 </v-list-item>
               </template>
-            </v-list-item-group>
+            </v-list-group>
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -63,7 +63,7 @@
         </v-expansion-panel-header>
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
-            <v-list-item-group
+            <v-list-group
               v-model="selectedFeatureFilters"
               multiple
               @change="emitFilterChange"
@@ -82,7 +82,7 @@
                   </template>
                 </v-list-item>
               </template>
-            </v-list-item-group>
+            </v-list-group>
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -90,7 +90,7 @@
         <v-expansion-panel-header>{{ $t('genres') }}</v-expansion-panel-header>
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
-            <v-list-item-group
+            <v-list-group
               v-model="selectedGenreFilters"
               multiple
               @change="emitFilterChange"
@@ -109,7 +109,7 @@
                   </template>
                 </v-list-item>
               </template>
-            </v-list-item-group>
+            </v-list-group>
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -119,7 +119,7 @@
         </v-expansion-panel-header>
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
-            <v-list-item-group
+            <v-list-group
               v-model="selectedRatingFilters"
               multiple
               @change="emitFilterChange"
@@ -138,7 +138,7 @@
                   </template>
                 </v-list-item>
               </template>
-            </v-list-item-group>
+            </v-list-group>
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -153,7 +153,7 @@
         </v-expansion-panel-header>
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
-            <v-list-item-group
+            <v-list-group
               v-model="selectedTypeFilters"
               multiple
               @change="emitFilterChange"
@@ -172,7 +172,7 @@
                   </template>
                 </v-list-item>
               </template>
-            </v-list-item-group>
+            </v-list-group>
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -182,7 +182,7 @@
         </v-expansion-panel-header>
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
-            <v-list-item-group
+            <v-list-group
               v-model="selectedYearFilters"
               multiple
               @change="emitFilterChange"
@@ -201,7 +201,7 @@
                   </template>
                 </v-list-item>
               </template>
-            </v-list-item-group>
+            </v-list-group>
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>

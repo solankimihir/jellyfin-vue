@@ -33,7 +33,7 @@
     </template>
     <v-card>
       <v-list color="transparent">
-        <v-list-item-group>
+        <v-list-group>
           <v-list-item v-for="task in taskList" :key="`${task.id}`">
             {{ $t(task.textKey, { ...task.textParams }) }}
             <v-list-item-action>
@@ -49,7 +49,7 @@
               <v-icon v-else>mdi-check</v-icon>
             </v-list-item-action>
           </v-list-item>
-        </v-list-item-group>
+        </v-list-group>
       </v-list>
     </v-card>
   </v-menu>

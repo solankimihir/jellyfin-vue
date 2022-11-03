@@ -26,7 +26,7 @@
     </template>
     <v-card>
       <v-list color="transparent">
-        <v-list-item-group>
+        <v-list-group>
           <v-list-item>
             <v-icon>mdi-account-group</v-icon>
             {{ $t('syncPlayGroups') }}
@@ -47,7 +47,7 @@
             <v-icon>$vuetify.icons.jellyfin</v-icon>
             {{ $t('genericJellyfinPlaceholderDevice') }}
           </v-list-item>
-        </v-list-item-group>
+        </v-list-group>
       </v-list>
     </v-card>
   </v-menu>
