@@ -25,8 +25,7 @@
       </v-btn>
     </template>
     <v-expansion-panels accordion flat focusable class="dropdown">
-      <v-expansion-panel>
-        <v-expansion-panel-header>{{ $t('status') }}</v-expansion-panel-header>
+      <v-expansion-panel :title="$t('status')">
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
             <v-list-group
@@ -57,10 +56,8 @@
           collectionInfo.CollectionType === 'movies' ||
           collectionInfo.CollectionType === 'tvshows'
         "
+        :title="$t('features')"
       >
-        <v-expansion-panel-header>
-          {{ $t('features') }}
-        </v-expansion-panel-header>
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
             <v-list-group
@@ -86,8 +83,7 @@
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
-      <v-expansion-panel v-if="genreFilters.length > 0">
-        <v-expansion-panel-header>{{ $t('genres') }}</v-expansion-panel-header>
+      <v-expansion-panel v-if="genreFilters.length > 0" :title="$t('genres')">
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
             <v-list-group
@@ -113,10 +109,10 @@
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
-      <v-expansion-panel v-if="ratingFilters.length > 0">
-        <v-expansion-panel-header>
-          {{ $t('parentalRatings') }}
-        </v-expansion-panel-header>
+      <v-expansion-panel
+        v-if="ratingFilters.length > 0"
+        :title="$t('parentalRatings')"
+      >
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
             <v-list-group
@@ -147,10 +143,8 @@
           collectionInfo.CollectionType === 'movies' ||
           collectionInfo.CollectionType === 'tvshows'
         "
+        :title="$t('videoTypes')"
       >
-        <v-expansion-panel-header>
-          {{ $t('videoTypes') }}
-        </v-expansion-panel-header>
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
             <v-list-group
@@ -176,10 +170,7 @@
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
-      <v-expansion-panel v-if="yearFilters.length > 0">
-        <v-expansion-panel-header>
-          {{ $t('years') }}
-        </v-expansion-panel-header>
+      <v-expansion-panel v-if="yearFilters.length > 0" :title="$t('years')">
         <v-expansion-panel-content class="filter-content">
           <v-list dense>
             <v-list-group
