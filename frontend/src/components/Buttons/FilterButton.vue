@@ -26,30 +26,28 @@
     </template>
     <v-expansion-panels accordion flat focusable class="dropdown">
       <v-expansion-panel :title="$t('status')">
-        <v-expansion-panel-content class="filter-content">
-          <v-list dense>
-            <v-list-group
-              v-model="selectedStatusFilters"
-              multiple
-              @change="emitFilterChange"
+        <v-list dense class="filter-content">
+          <v-list-group
+            v-model="selectedStatusFilters"
+            multiple
+            @change="emitFilterChange"
+          >
+            <template
+              v-for="(status, statusIndex) in statusFilters"
+              :key="`status-${statusIndex}`"
             >
-              <template
-                v-for="(status, statusIndex) in statusFilters"
-                :key="`status-${statusIndex}`"
-              >
-                <v-list-item :value="status.name">
-                  <template #default="{ active }">
-                    <v-list-item-title v-text="status.label" />
+              <v-list-item :value="status.name">
+                <template #default="{ active }">
+                  <v-list-item-title v-text="status.label" />
 
-                    <v-list-item-action>
-                      <v-checkbox :input-value="active" />
-                    </v-list-item-action>
-                  </template>
-                </v-list-item>
-              </template>
-            </v-list-group>
-          </v-list>
-        </v-expansion-panel-content>
+                  <v-list-item-action>
+                    <v-checkbox :input-value="active" />
+                  </v-list-item-action>
+                </template>
+              </v-list-item>
+            </template>
+          </v-list-group>
+        </v-list>
       </v-expansion-panel>
       <v-expansion-panel
         v-if="
@@ -58,85 +56,79 @@
         "
         :title="$t('features')"
       >
-        <v-expansion-panel-content class="filter-content">
-          <v-list dense>
-            <v-list-group
-              v-model="selectedFeatureFilters"
-              multiple
-              @change="emitFilterChange"
+        <v-list dense class="filter-content">
+          <v-list-group
+            v-model="selectedFeatureFilters"
+            multiple
+            @change="emitFilterChange"
+          >
+            <template
+              v-for="(feature, featureIndex) in featureFilters"
+              :key="`feature-${featureIndex}`"
             >
-              <template
-                v-for="(feature, featureIndex) in featureFilters"
-                :key="`feature-${featureIndex}`"
-              >
-                <v-list-item :value="feature.name">
-                  <template #default="{ active }">
-                    <v-list-item-title v-text="feature.label" />
+              <v-list-item :value="feature.name">
+                <template #default="{ active }">
+                  <v-list-item-title v-text="feature.label" />
 
-                    <v-list-item-action>
-                      <v-checkbox :input-value="active" />
-                    </v-list-item-action>
-                  </template>
-                </v-list-item>
-              </template>
-            </v-list-group>
-          </v-list>
-        </v-expansion-panel-content>
+                  <v-list-item-action>
+                    <v-checkbox :input-value="active" />
+                  </v-list-item-action>
+                </template>
+              </v-list-item>
+            </template>
+          </v-list-group>
+        </v-list>
       </v-expansion-panel>
       <v-expansion-panel v-if="genreFilters.length > 0" :title="$t('genres')">
-        <v-expansion-panel-content class="filter-content">
-          <v-list dense>
-            <v-list-group
-              v-model="selectedGenreFilters"
-              multiple
-              @change="emitFilterChange"
+        <v-list dense class="filter-content">
+          <v-list-group
+            v-model="selectedGenreFilters"
+            multiple
+            @change="emitFilterChange"
+          >
+            <template
+              v-for="(genre, genreIndex) in genreFilters"
+              :key="`genre-${genreIndex}`"
             >
-              <template
-                v-for="(genre, genreIndex) in genreFilters"
-                :key="`genre-${genreIndex}`"
-              >
-                <v-list-item :value="genre">
-                  <template #default="{ active }">
-                    <v-list-item-title v-text="genre" />
+              <v-list-item :value="genre">
+                <template #default="{ active }">
+                  <v-list-item-title v-text="genre" />
 
-                    <v-list-item-action>
-                      <v-checkbox :input-value="active" />
-                    </v-list-item-action>
-                  </template>
-                </v-list-item>
-              </template>
-            </v-list-group>
-          </v-list>
-        </v-expansion-panel-content>
+                  <v-list-item-action>
+                    <v-checkbox :input-value="active" />
+                  </v-list-item-action>
+                </template>
+              </v-list-item>
+            </template>
+          </v-list-group>
+        </v-list>
       </v-expansion-panel>
       <v-expansion-panel
         v-if="ratingFilters.length > 0"
         :title="$t('parentalRatings')"
       >
-        <v-expansion-panel-content class="filter-content">
-          <v-list dense>
-            <v-list-group
-              v-model="selectedRatingFilters"
-              multiple
-              @change="emitFilterChange"
+        <v-list dense class="filter-content">
+          <v-list-group
+            v-model="selectedRatingFilters"
+            multiple
+            @change="emitFilterChange"
+          >
+            <template
+              v-for="(rating, ratingIndex) in ratingFilters"
+              :key="`rating-${ratingIndex}`"
             >
-              <template
-                v-for="(rating, ratingIndex) in ratingFilters"
-                :key="`rating-${ratingIndex}`"
-              >
-                <v-list-item :value="rating">
-                  <template #default="{ active }">
-                    <v-list-item-title v-text="rating" />
+              <v-list-item :value="rating">
+                <template #default="{ active }">
+                  <v-list-item-title v-text="rating" />
 
-                    <v-list-item-action>
-                      <v-checkbox :input-value="active" />
-                    </v-list-item-action>
-                  </template>
-                </v-list-item>
-              </template>
-            </v-list-group>
-          </v-list>
-        </v-expansion-panel-content>
+                  <v-list-item-action>
+                    <v-checkbox :input-value="active" />
+                  </v-list-item-action>
+                </template>
+              </v-list-item>
+            </template>
+          </v-list-group>
+        </v-list>
       </v-expansion-panel>
       <v-expansion-panel
         v-if="
@@ -145,56 +137,52 @@
         "
         :title="$t('videoTypes')"
       >
-        <v-expansion-panel-content class="filter-content">
-          <v-list dense>
-            <v-list-group
-              v-model="selectedTypeFilters"
-              multiple
-              @change="emitFilterChange"
+        <v-list dense class="filter-content">
+          <v-list-group
+            v-model="selectedTypeFilters"
+            multiple
+            @change="emitFilterChange"
+          >
+            <template
+              v-for="(type, typeIndex) in typeFilters"
+              :key="`type-${typeIndex}`"
             >
-              <template
-                v-for="(type, typeIndex) in typeFilters"
-                :key="`type-${typeIndex}`"
-              >
-                <v-list-item :value="type.name">
-                  <template #default="{ active }">
-                    <v-list-item-title v-text="type.label" />
+              <v-list-item :value="type.name">
+                <template #default="{ active }">
+                  <v-list-item-title v-text="type.label" />
 
-                    <v-list-item-action>
-                      <v-checkbox :input-value="active" />
-                    </v-list-item-action>
-                  </template>
-                </v-list-item>
-              </template>
-            </v-list-group>
-          </v-list>
-        </v-expansion-panel-content>
+                  <v-list-item-action>
+                    <v-checkbox :input-value="active" />
+                  </v-list-item-action>
+                </template>
+              </v-list-item>
+            </template>
+          </v-list-group>
+        </v-list>
       </v-expansion-panel>
       <v-expansion-panel v-if="yearFilters.length > 0" :title="$t('years')">
-        <v-expansion-panel-content class="filter-content">
-          <v-list dense>
-            <v-list-group
-              v-model="selectedYearFilters"
-              multiple
-              @change="emitFilterChange"
+        <v-list dense class="filter-content">
+          <v-list-group
+            v-model="selectedYearFilters"
+            multiple
+            @change="emitFilterChange"
+          >
+            <template
+              v-for="(year, yearIndex) in yearFilters"
+              :key="`year-${yearIndex}`"
             >
-              <template
-                v-for="(year, yearIndex) in yearFilters"
-                :key="`year-${yearIndex}`"
-              >
-                <v-list-item :value="year">
-                  <template #default="{ active }">
-                    <v-list-item-title v-text="year" />
+              <v-list-item :value="year">
+                <template #default="{ active }">
+                  <v-list-item-title v-text="year" />
 
-                    <v-list-item-action>
-                      <v-checkbox :input-value="active" />
-                    </v-list-item-action>
-                  </template>
-                </v-list-item>
-              </template>
-            </v-list-group>
-          </v-list>
-        </v-expansion-panel-content>
+                  <v-list-item-action>
+                    <v-checkbox :input-value="active" />
+                  </v-list-item-action>
+                </template>
+              </v-list-item>
+            </template>
+          </v-list-group>
+        </v-list>
       </v-expansion-panel>
     </v-expansion-panels>
   </v-menu>
