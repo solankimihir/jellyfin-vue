@@ -481,7 +481,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .shaka-video-container,
 video {
   max-width: 100vw;
