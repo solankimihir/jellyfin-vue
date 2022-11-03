@@ -77,7 +77,6 @@ export default defineComponent({
 
         this.$emit('step-complete', { step: 3 });
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.error(error);
         this.snackbar.push(this.$t('wizard.setMetadataError'), 'error');
       }

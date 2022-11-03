@@ -51,7 +51,7 @@
     </v-fade-transition>
     <metadata-editor-dialog
       v-if="metadataDialog"
-      :dialog.sync="metadataDialog"
+      v-model:dialog="metadataDialog"
       :item-id="item.Id"
     />
   </div>
@@ -260,7 +260,6 @@ export default defineComponent({
                 progress: 0
               } as RunningTask);
             } catch (e) {
-              // eslint-disable-next-line no-console
               console.error(e);
 
               this.snackbar.push(this.$t('unableToRefreshLibrary'), 'error');
@@ -296,7 +295,7 @@ export default defineComponent({
       );
     }
   },
-  destroyed() {
+  unmounted() {
     if (this.$parent.$el) {
       (this.$parent.$el as HTMLElement).removeEventListener(
         'contextmenu',

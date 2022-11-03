@@ -238,7 +238,7 @@ export default defineComponent({
       });
     }
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.playbackManager.stop();
 
     if (this.shaka) {

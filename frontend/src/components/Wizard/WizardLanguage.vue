@@ -51,7 +51,6 @@ export default defineComponent({
         await this.$api.localization.getLocalizationOptions()
       ).data;
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error(error);
     }
 
@@ -73,7 +72,6 @@ export default defineComponent({
 
         this.$emit('step-complete', { step: 1 });
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.error(error);
         this.snackbar.push(this.$t('wizard.setLanguageError'), 'error');
       }

@@ -124,7 +124,6 @@ export default defineComponent({
         // Redirect to setup complete page
         this.$router.replace('/server/login');
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.error(error);
         this.snackbar.push(this.$t('wizard.completeError'), 'success');
       }

@@ -77,7 +77,7 @@ export default defineComponent({
       window.requestAnimationFrame(this.updateBars);
     });
   },
-  destroyed() {
+  unmounted() {
     const animEndFunction = this.onAnimationEnd;
 
     this.bars.forEach((el: HTMLElement) => {

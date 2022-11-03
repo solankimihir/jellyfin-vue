@@ -146,7 +146,7 @@ export default defineComponent({
       }
     },
     /**
-     * @returns {string} Either the item name or the series name
+     * @returns Either the item name or the series name
      */
     cardTitle(): string {
       if (this.item.Type !== 'Episode') {
@@ -156,7 +156,7 @@ export default defineComponent({
       }
     },
     /**
-     * @returns {string} Either a string representing the production year(s) for the current item
+     * @returns Either a string representing the production year(s) for the current item
      *                   or the episode name of an item (SX EY - Episode Name)
      *                   or the album artist
      */
@@ -197,7 +197,7 @@ export default defineComponent({
     /**
      * Gets a link to be applied to the card title
      *
-     * @returns {string} A router link to the item or a related item
+     * @returns A router link to the item or a related item
      */
     cardTitleLink(): string {
       if (this.item.Type === 'Episode' && this.item.SeriesId) {
@@ -209,7 +209,7 @@ export default defineComponent({
     /**
      * Gets a link to be applied to the card subtitle
      *
-     * @returns {string|null} A router link to the parent item or a related item
+     * @returns A router link to the parent item or a related item
      */
     cardSubtitleLink(): string | null {
       if (

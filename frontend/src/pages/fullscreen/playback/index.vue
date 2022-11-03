@@ -92,7 +92,7 @@ export default defineComponent({
     this.swiper = (this.$refs.playbackSwiper as Vue).$swiper as Swiper;
     this.playbackManager.setMinimized(false);
   },
-  destroyed() {
+  unmounted() {
     this.playbackManager.setMinimized(true);
   },
   methods: {

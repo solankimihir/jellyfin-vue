@@ -74,7 +74,6 @@ export default defineComponent({
         this.newKeyAppName = '';
         this.$emit('key-added');
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.error(error);
 
         this.snackbar.push(

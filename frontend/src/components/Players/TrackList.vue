@@ -114,8 +114,8 @@ export default defineComponent({
   },
   methods: {
     /**
-     * @param {number} ticks - The number of ticks to convert to track length
-     * @returns {string} Returns the length of the track in the format XX:XX
+     * @param ticks - The number of ticks to convert to track length
+     * @returns Returns the length of the track in the format XX:XX
      */
     getRuntime(ticks: number): string {
       let seconds = ticksToMs(ticks) / 1000;
@@ -127,8 +127,8 @@ export default defineComponent({
        * Formats the second number
        *
        * @example 7 -> 07
-       * @param {string} seconds - Number to format
-       * @returns {string} Formatted seconds number
+       * @param seconds - Number to format
+       * @returns Formatted seconds number
        */
       function formatSeconds(seconds: string): string {
         return ('0' + seconds).slice(-2);

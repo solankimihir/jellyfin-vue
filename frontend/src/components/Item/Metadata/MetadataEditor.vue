@@ -89,8 +89,8 @@
             />
             <v-combobox
               v-model="metadata.Genres"
+              v-model:search-input="search"
               :items="genders"
-              :search-input.sync="search"
               :label="$t('genres')"
               hide-selected
               multiple
@@ -109,8 +109,8 @@
             </v-combobox>
             <v-combobox
               v-model="metadata.Tags"
+              v-model:search-input="search"
               :items="genders"
-              :search-input.sync="search"
               :label="$t('tags')"
               hide-selected
               multiple
@@ -201,8 +201,8 @@
       </v-btn>
     </v-card-actions>
     <person-editor
+      v-model:dialog="dialog"
       :person="person"
-      :dialog.sync="dialog"
       @update:person="handlePersonUpdate"
       @update:dialog="handleDialogUpdate"
     />
@@ -249,13 +249,11 @@ export default defineComponent({
           return '';
         }
 
-        const dateStr = this.$dateFns.format(
+        return this.$dateFns.format(
           new Date(this.metadata.PremiereDate),
           'yyyy-MM-dd',
           { locale: this.$i18n.locale }
         );
-
-        return dateStr;
       }
     },
     dateCreated: {
@@ -264,13 +262,11 @@ export default defineComponent({
           return '';
         }
 
-        const dateStr = this.$dateFns.format(
+        return this.$dateFns.format(
           new Date(this.metadata.DateCreated),
           'yyyy-MM-dd',
           { locale: this.$i18n.locale }
         );
-
-        return dateStr;
       }
     }
   },

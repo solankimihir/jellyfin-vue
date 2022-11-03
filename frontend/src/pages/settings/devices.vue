@@ -107,7 +107,7 @@ export default defineComponent({
           this.$t('settings.devices.deleteDeviceError'),
           'error'
         );
-        // eslint-disable-next-line no-console
+
         console.error(error);
       }
     },
@@ -133,7 +133,6 @@ export default defineComponent({
           'error'
         );
 
-        // eslint-disable-next-line no-console
         console.error(error);
       }
     },
@@ -162,7 +161,6 @@ export default defineComponent({
       } catch (error) {
         this.snackbar.push(this.$t('deleteDeviceError'), 'error');
 
-        // eslint-disable-next-line no-console
         console.error(error);
       }
 

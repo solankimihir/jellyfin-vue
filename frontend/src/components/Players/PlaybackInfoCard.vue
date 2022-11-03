@@ -376,7 +376,7 @@ export default defineComponent({
       this.updateSession();
     }, 10000);
   },
-  beforeDestroy() {
+  beforeUnmount() {
     if (this.updateSessionInterval !== null) {
       window.clearInterval(this.updateSessionInterval);
     }

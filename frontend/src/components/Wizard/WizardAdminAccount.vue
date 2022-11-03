@@ -86,7 +86,6 @@ export default defineComponent({
 
         this.$emit('step-complete', { step: 2 });
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.error(error);
         this.snackbar.push(this.$t('wizard.setAdminError'), 'error');
       }

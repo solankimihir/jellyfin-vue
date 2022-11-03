@@ -301,7 +301,7 @@ export default defineComponent({
       }
     }
   },
-  beforeDestroy() {
+  beforeUnmount() {
     if (this.fullScreenOverlayTimer) {
       clearTimeout(this.fullScreenOverlayTimer);
     }

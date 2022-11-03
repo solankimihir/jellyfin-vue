@@ -83,15 +83,14 @@ export default defineComponent({
     tracks(): PlaybackTrack[] {
       const subs = this.playbackManager
         .getCurrentItemParsedSubtitleTracks as PlaybackTrack[];
-      const res = [
+
+      return [
         {
           label: this.$t('disabled'),
           srcIndex: -1,
           type: SubtitleDeliveryMethod.External
         }
       ].concat(subs) as PlaybackTrack[];
-
-      return res;
     }
   }
 });

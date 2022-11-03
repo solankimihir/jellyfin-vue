@@ -57,7 +57,7 @@
       </v-col>
     </v-row>
     <image-search
-      :dialog.sync="dialog"
+      v-model:dialog="dialog"
       :metadata="metadata"
       @download-success="getItemImageInfos"
     />

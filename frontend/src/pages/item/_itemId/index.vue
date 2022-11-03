@@ -149,10 +149,10 @@
                     hide-details
                     class="text-truncate"
                   >
-                    <template slot="selection" slot-scope="{ item: i }">
+                    <template #selection="{ item: i }">
                       {{ i.value.Name }}
                     </template>
-                    <template slot="item" slot-scope="{ item: i }">
+                    <template #item="{ item: i }">
                       {{ i.value.Name }}
                     </template>
                   </v-select>

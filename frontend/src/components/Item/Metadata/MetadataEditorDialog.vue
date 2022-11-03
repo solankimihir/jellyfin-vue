@@ -7,8 +7,8 @@
     @click:outside="$emit('update:dialog', false)"
   >
     <metadata-editor
+      v-model:force-refresh="forceRefresh"
       :item-id="itemId"
-      :force-refresh.sync="forceRefresh"
       @cancel="close"
       @save="close"
     />

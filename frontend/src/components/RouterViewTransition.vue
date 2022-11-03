@@ -15,7 +15,7 @@
     </transition>
   </router-view>
 
-  <router-view v-else></router-view>
+  <router-view v-else />
 </template>
 
 <script setup lang="ts">
@@ -37,10 +37,14 @@ const props = withDefaults(defineProps<Props>(), {
   enableTransitions: true
 });
 
+/**
+ *
+ */
 function getKey(route: RouteLocationNormalized) {
   if (props.isRoot) {
     return String(route.meta.layout) || 'default';
   }
+
   return String(route.name);
 }
 </script>
