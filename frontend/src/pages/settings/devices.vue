@@ -19,12 +19,12 @@
     </template>
     <template #content>
       <v-col>
-        <v-data-table
+        <!-- TODO: Wait for Vuetify 3.1 -->
+        <!-- <v-data-table
           :headers="headers"
           :items="devices"
           @click:row="setSelectedDevice"
         >
-          <!-- eslint-disable-next-line vue/valid-v-slot -->
           <template #item.DateLastActivity="{ item }">
             <p class="text-capitalize-first-letter mb-0">
               {{
@@ -38,7 +38,7 @@
               }}
             </p>
           </template>
-        </v-data-table>
+        </v-data-table> -->
       </v-col>
       <v-dialog v-model="deviceInfoDialog" width="fit-content">
         <selected-device-info

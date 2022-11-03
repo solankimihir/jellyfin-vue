@@ -12,7 +12,8 @@
             height="100px"
             :alt="$t('jellyfinLogo')"
           />
-          <v-simple-table class="mb-4 pb-2 information">
+          <!-- TODO: Wait for Vuetify 3.1 -->
+          <!-- <v-simple-table class="mb-4 pb-2 information">
             <tbody>
               <tr>
                 <td>{{ $t('server') }}</td>
@@ -35,7 +36,7 @@
                 <td>{{ vueVersion }}</td>
               </tr>
             </tbody>
-          </v-simple-table>
+          </v-simple-table> -->
         </div>
         <about-links v-if="!$vuetify.display.mobile" />
       </v-col>

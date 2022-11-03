@@ -1,5 +1,6 @@
 <template>
-  <v-simple-table dense class="track-table no-select">
+  <!-- TODO: Wait for Vuetify 3.1 -->
+  <!-- <v-simple-table dense class="track-table no-select">
     <thead>
       <tr>
         <th style="width: 4em" class="pr-0 text-center" scope="col">#</th>
@@ -68,7 +69,7 @@
         </v-hover>
       </template>
     </tbody>
-  </v-simple-table>
+  </v-simple-table> -->
 </template>
 
 <script lang="ts">
