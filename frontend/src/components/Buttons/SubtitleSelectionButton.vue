@@ -41,15 +41,11 @@
           :key="track.srcIndex"
           @click="playbackManager.currentSubtitleStreamIndex = track.srcIndex"
         >
-          <v-list-item-icon>
-            <v-icon
-              v-if="
-                track.srcIndex === playbackManager.currentSubtitleStreamIndex
-              "
-            >
-              mdi-check
-            </v-icon>
-          </v-list-item-icon>
+          <v-icon
+            v-if="track.srcIndex === playbackManager.currentSubtitleStreamIndex"
+          >
+            mdi-check
+          </v-icon>
           {{ track.label }}
         </v-list-item>
       </v-list>

@@ -38,9 +38,7 @@
               :disabled="menuOption.disabled"
               @click="menuOption.action"
             >
-              <v-list-item-icon>
-                <v-icon>{{ menuOption.icon }}</v-icon>
-              </v-list-item-icon>
+              <v-icon>{{ menuOption.icon }}</v-icon>
               <v-list-item-title class="text">
                 {{ menuOption.title }}
               </v-list-item-title>
