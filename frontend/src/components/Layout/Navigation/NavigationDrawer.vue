@@ -23,9 +23,7 @@
         <v-list-item-action>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title v-text="item.title" />
-        </v-list-item-content>
+        <v-list-item-title v-text="item.title" />
       </v-list-item>
       <v-subheader>{{ $t('libraries') }}</v-subheader>
       <v-list-item
@@ -38,9 +36,7 @@
         <v-list-item-action>
           <v-icon>{{ library.icon }}</v-icon>
         </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title v-text="library.title" />
-        </v-list-item-content>
+        <v-list-item-title v-text="library.title" />
       </v-list-item>
     </v-list>
     <template #append>

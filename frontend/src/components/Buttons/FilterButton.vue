@@ -40,9 +40,7 @@
               >
                 <v-list-item :value="status.name">
                   <template #default="{ active }">
-                    <v-list-item-content>
-                      <v-list-item-title v-text="status.label" />
-                    </v-list-item-content>
+                    <v-list-item-title v-text="status.label" />
 
                     <v-list-item-action>
                       <v-checkbox :input-value="active" />
@@ -76,9 +74,7 @@
               >
                 <v-list-item :value="feature.name">
                   <template #default="{ active }">
-                    <v-list-item-content>
-                      <v-list-item-title v-text="feature.label" />
-                    </v-list-item-content>
+                    <v-list-item-title v-text="feature.label" />
 
                     <v-list-item-action>
                       <v-checkbox :input-value="active" />
@@ -105,9 +101,7 @@
               >
                 <v-list-item :value="genre">
                   <template #default="{ active }">
-                    <v-list-item-content>
-                      <v-list-item-title v-text="genre" />
-                    </v-list-item-content>
+                    <v-list-item-title v-text="genre" />
 
                     <v-list-item-action>
                       <v-checkbox :input-value="active" />
@@ -136,9 +130,7 @@
               >
                 <v-list-item :value="rating">
                   <template #default="{ active }">
-                    <v-list-item-content>
-                      <v-list-item-title v-text="rating" />
-                    </v-list-item-content>
+                    <v-list-item-title v-text="rating" />
 
                     <v-list-item-action>
                       <v-checkbox :input-value="active" />
@@ -172,9 +164,7 @@
               >
                 <v-list-item :value="type.name">
                   <template #default="{ active }">
-                    <v-list-item-content>
-                      <v-list-item-title v-text="type.label" />
-                    </v-list-item-content>
+                    <v-list-item-title v-text="type.label" />
 
                     <v-list-item-action>
                       <v-checkbox :input-value="active" />
@@ -203,9 +193,7 @@
               >
                 <v-list-item :value="year">
                   <template #default="{ active }">
-                    <v-list-item-content>
-                      <v-list-item-title v-text="year" />
-                    </v-list-item-content>
+                    <v-list-item-title v-text="year" />
 
                     <v-list-item-action>
                       <v-checkbox :input-value="active" />
