@@ -15,7 +15,8 @@
         v-on="on"
       />
     </template>
-    <v-date-picker :value="value" @change="handleChange" />
+    <!-- Wait for Vuetify 3.1 -->
+    <!-- <v-date-picker :value="value" @change="handleChange" /> -->
   </v-menu>
 </template>
 <script lang="ts">

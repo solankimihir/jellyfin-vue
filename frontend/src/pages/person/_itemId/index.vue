@@ -53,8 +53,8 @@
               {{ $t('item.person.information') }}
             </v-tab>
           </v-tabs>
-          <v-tabs-items v-model="activeTab" class="transparent">
-            <v-tab-item :key="0">
+          <v-tabs v-model="activeTab" class="transparent">
+            <v-tab :key="0">
               <v-container>
                 <v-row>
                   <v-col>
@@ -62,8 +62,8 @@
                   </v-col>
                 </v-row>
               </v-container>
-            </v-tab-item>
-            <v-tab-item :key="1">
+            </v-tab>
+            <v-tab :key="1">
               <v-container>
                 <v-row>
                   <v-col>
@@ -71,8 +71,8 @@
                   </v-col>
                 </v-row>
               </v-container>
-            </v-tab-item>
-            <v-tab-item :key="2">
+            </v-tab>
+            <v-tab :key="2">
               <v-container>
                 <v-row>
                   <v-col>
@@ -80,8 +80,8 @@
                   </v-col>
                 </v-row>
               </v-container>
-            </v-tab-item>
-            <v-tab-item :key="3">
+            </v-tab>
+            <v-tab :key="3">
               <v-container>
                 <v-row>
                   <v-col>
@@ -89,8 +89,8 @@
                   </v-col>
                 </v-row>
               </v-container>
-            </v-tab-item>
-            <v-tab-item :key="4">
+            </v-tab>
+            <v-tab :key="4">
               <v-container>
                 <v-row>
                   <v-col>
@@ -131,8 +131,8 @@
                   </v-col>
                 </v-row>
               </v-container>
-            </v-tab-item>
-          </v-tabs-items>
+            </v-tab>
+          </v-tabs>
         </v-col>
       </v-row>
     </template>

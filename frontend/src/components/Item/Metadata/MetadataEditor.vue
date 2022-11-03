@@ -14,8 +14,8 @@
         <v-tab href="#castAndCrew">{{ $t('castAndCrew') }}</v-tab>
         <v-tab href="#images">{{ $t('images') }}</v-tab>
 
-        <v-tabs-items v-model="tabName" class="pa-3">
-          <v-tab-item value="general">
+        <v-tabs v-model="tabName" class="pa-3">
+          <v-tab value="general">
             <v-text-field
               v-model="metadata.Name"
               outlined
@@ -43,8 +43,8 @@
               rows="4"
               :label="$t('overview')"
             />
-          </v-tab-item>
-          <v-tab-item value="details">
+          </v-tab>
+          <v-tab value="details">
             <date-input
               :value="dateCreated"
               :label="$t('dateAdded')"
@@ -123,8 +123,8 @@
                 </v-list-item>
               </template>
             </v-combobox>
-          </v-tab-item>
-          <v-tab-item value="castAndCrew">
+          </v-tab>
+          <v-tab value="castAndCrew">
             <v-list two-line>
               <v-list-item @click="(e) => handlePersonEdit()">
                 <v-list-item-title>
@@ -157,11 +157,11 @@
                 </v-list-item-action>
               </v-list-item>
             </v-list>
-          </v-tab-item>
-          <v-tab-item value="images">
+          </v-tab>
+          <v-tab value="images">
             <image-editor :metadata="metadata" />
-          </v-tab-item>
-        </v-tabs-items>
+          </v-tab>
+        </v-tabs>
       </v-tabs>
     </v-card-text>
 
