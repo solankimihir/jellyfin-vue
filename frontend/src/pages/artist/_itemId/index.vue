@@ -36,7 +36,7 @@
       </v-row>
       <v-row>
         <v-col>
-          <v-tabs v-model="activeTab" background-color="transparent">
+          <v-tabs v-model="activeTab" bg-color="transparent">
             <v-tab :key="0" :disabled="!discography.length">
               {{ $t('item.artist.discography') }}
             </v-tab>
@@ -50,7 +50,7 @@
               {{ $t('item.artist.information') }}
             </v-tab>
           </v-tabs>
-          <v-tabs v-model="activeTab" class="transparent">
+          <v-tabs v-model="activeTab" class="bg-transparent">
             <v-tab :key="0">
               <v-row no-gutters>
                 <v-col cols="12" class="my-6">

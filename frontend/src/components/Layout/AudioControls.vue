@@ -20,7 +20,6 @@
             <router-link :to="'/fullscreen/playback'">
               <v-avatar
                 v-if="!isFullScreenPlayer"
-                tile
                 :size="$vuetify.display.xs ? 50 : 85"
                 color="primary"
               >
@@ -64,7 +63,7 @@
                 <v-btn
                   icon
                   fab
-                  small
+                  size="small"
                   class="mx-1 active-button"
                   :color="playbackManager.isShuffling ? 'primary' : undefined"
                   @click="playbackManager.toggleShuffle"
@@ -86,7 +85,7 @@
                   class="mx-1 active-button"
                   @click="playbackManager.playPause"
                 >
-                  <v-icon large>
+                  <v-icon size="large">
                     {{
                       playbackManager.isPaused
                         ? 'mdi-play-circle-outline'
@@ -105,7 +104,7 @@
                 <v-btn
                   icon
                   fab
-                  small
+                  size="small"
                   class="mx-1 active-button"
                   :color="playbackManager.isRepeating ? 'primary' : undefined"
                   @click="playbackManager.toggleRepeatMode"

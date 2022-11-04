@@ -188,9 +188,9 @@ export function getDesiredAspect(shape: ValidCardShapes): number {
  * @param [options.inheritThumb=false] - Inherit the thumb from parent items
  * @param [options.quality=90] - Sets the quality of the returned image
  * @param [options.width] - Sets the requested width of the image
- * @param {number} [options.ratio=1] - Sets the device pixel ratio for the image, used for computing the real image size
- * @param {string} [options.tag] - Sets a specific image tag to get, bypassing the automatic priorities.
- * @returns {ImageUrlInfo} Information for the item, containing the full URL, image tag and blurhash.
+ * @param [options.ratio=1] - Sets the device pixel ratio for the image, used for computing the real image size
+ * @param [options.tag] - Sets a specific image tag to get, bypassing the automatic priorities.
+ * @returns Information for the item, containing the full URL, image tag and blurhash.
  */
 export function getImageInfo(
   item: BaseItemDto | BaseItemPerson,

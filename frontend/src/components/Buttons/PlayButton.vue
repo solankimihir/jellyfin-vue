@@ -3,7 +3,7 @@
     <v-btn
       v-if="canPlay(item) && (fab || iconOnly)"
       :fab="fab"
-      :text="iconOnly"
+      :variant="iconOnly && 'text'"
       :color="iconOnly ? null : 'primary'"
       :loading="loading"
       :disabled="disabled"
@@ -19,7 +19,7 @@
       class="mr-2"
       color="primary"
       min-width="8em"
-      depressed
+      variant="flat"
       rounded
       @click="playOrResume"
     >

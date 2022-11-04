@@ -2,19 +2,19 @@
   <div>
     <v-select
       v-model="metadataLanguage"
-      outlined
+      variant="outlined"
       :label="$t('metadataLanguage')"
       required
-      item-text="DisplayName"
+      item-title="DisplayName"
       item-value="TwoLetterISOLanguageName"
       :items="cultureOptions"
     />
     <v-select
       v-model="metadataCountry"
-      outlined
+      variant="outlined"
       :label="$t('metadataCountry')"
       required
-      item-text="DisplayName"
+      item-title="DisplayName"
       item-value="TwoLetterISORegionName"
       :items="countryOptions"
     />

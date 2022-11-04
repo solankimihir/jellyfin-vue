@@ -5,13 +5,13 @@
         v-if="!$vuetify.display.smAndDown"
         :disabled="disabled"
         class="ma-2"
-        text
+        variant="text"
         rounded
         v-bind="attrs"
         v-on="on"
       >
         {{ $t('filter') }}
-        <v-icon right>mdi-menu-down</v-icon>
+        <v-icon end>mdi-menu-down</v-icon>
       </v-btn>
       <v-btn
         v-else
@@ -41,7 +41,7 @@
                   <v-list-item-title v-text="status.label" />
 
                   <v-list-item-action>
-                    <v-checkbox :input-value="active" />
+                    <v-checkbox :model-value="active" />
                   </v-list-item-action>
                 </template>
               </v-list-item>
@@ -71,7 +71,7 @@
                   <v-list-item-title v-text="feature.label" />
 
                   <v-list-item-action>
-                    <v-checkbox :input-value="active" />
+                    <v-checkbox :model-value="active" />
                   </v-list-item-action>
                 </template>
               </v-list-item>
@@ -95,7 +95,7 @@
                   <v-list-item-title v-text="genre" />
 
                   <v-list-item-action>
-                    <v-checkbox :input-value="active" />
+                    <v-checkbox :model-value="active" />
                   </v-list-item-action>
                 </template>
               </v-list-item>
@@ -122,7 +122,7 @@
                   <v-list-item-title v-text="rating" />
 
                   <v-list-item-action>
-                    <v-checkbox :input-value="active" />
+                    <v-checkbox :model-value="active" />
                   </v-list-item-action>
                 </template>
               </v-list-item>
@@ -152,7 +152,7 @@
                   <v-list-item-title v-text="type.label" />
 
                   <v-list-item-action>
-                    <v-checkbox :input-value="active" />
+                    <v-checkbox :model-value="active" />
                   </v-list-item-action>
                 </template>
               </v-list-item>
@@ -176,7 +176,7 @@
                   <v-list-item-title v-text="year" />
 
                   <v-list-item-action>
-                    <v-checkbox :input-value="active" />
+                    <v-checkbox :model-value="active" />
                   </v-list-item-action>
                 </template>
               </v-list-item>

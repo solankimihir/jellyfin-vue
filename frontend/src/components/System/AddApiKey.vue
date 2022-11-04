@@ -1,6 +1,6 @@
 <template>
   <v-dialog
-    :value="addingNewKey"
+    :model-value="addingNewKey"
     :width="width"
     @click:outside="() => (addingNewKey = false)"
   >
@@ -11,7 +11,7 @@
           <v-form class="add-key-form" @submit.prevent="addApiKey">
             <v-text-field
               v-model="newKeyAppName"
-              outlined
+              variant="outlined"
               :label="$t('settings.apiKeys.appName')"
             />
             <v-btn color="primary" :loading="loading" @click="addApiKey">
