@@ -15,7 +15,9 @@
     </transition>
   </router-view>
 
-  <router-view v-else />
+  <router-view v-else v-slot="{ Component }">
+    <component :is="Component" />
+  </router-view>
 </template>
 
 <script setup lang="ts">
@@ -29,7 +31,7 @@ interface Props {
    * layout
    */
   isRoot?: boolean;
-  enableTransitions: boolean;
+  enableTransitions?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -38,9 +40,9 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 /**
- *
+ * Gets the key to re-render the component tree of the current page
  */
-function getKey(route: RouteLocationNormalized) {
+function getKey(route: RouteLocationNormalized): string {
   if (props.isRoot) {
     return String(route.meta.layout) || 'default';
   }

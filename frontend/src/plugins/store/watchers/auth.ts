@@ -31,6 +31,8 @@ export default function (ctx: PiniaPluginContext): void {
   const playbackManager = playbackManagerStore();
   const taskManager = taskManagerStore();
 
+  console.log('tessttsss');
+
   /**
    * Watch for actions after the app has been initialized
    */
