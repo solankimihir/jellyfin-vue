@@ -7,8 +7,7 @@
       required
       item-title="DisplayName"
       item-value="TwoLetterISOLanguageName"
-      :items="cultureOptions"
-    />
+      :items="cultureOptions" />
     <v-select
       v-model="metadataCountry"
       variant="outlined"
@@ -16,8 +15,7 @@
       required
       item-title="DisplayName"
       item-value="TwoLetterISORegionName"
-      :items="countryOptions"
-    />
+      :items="countryOptions" />
     <v-btn color="secondary" @click="$emit('previous-step', { step: 2 })">
       {{ $t('previous') }}
     </v-btn>

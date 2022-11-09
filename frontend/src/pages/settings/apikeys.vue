@@ -8,8 +8,7 @@
         v-if="apiKeys.length"
         color="error"
         :loading="revokeKeyLoading"
-        @click="revokeAllApiKeys"
-      >
+        @click="revokeAllApiKeys">
         {{ $t('settings.apiKeys.revokeAll') }}
       </v-btn>
     </template>

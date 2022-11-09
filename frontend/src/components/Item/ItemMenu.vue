@@ -9,8 +9,7 @@
         :z-index="zIndex"
         :position-x="positionX"
         :position-y="positionY"
-        location="top"
-      >
+        location="top">
         <template #activator="{ on, attrs }">
           <!-- See comments for this in the onRightClick method -->
           <v-btn
@@ -20,8 +19,7 @@
             v-bind="attrs"
             v-on="on"
             @click.stop.prevent="onActivatorClick"
-            @contextmenu="onRightClick"
-          >
+            @contextmenu="onRightClick">
             <v-icon>mdi-dots-horizontal</v-icon>
           </v-btn>
         </template>
@@ -30,14 +28,12 @@
             <v-divider
               v-if="section.length && index1 > 0"
               :key="`item-${item.Id}-section-${index1}-divider`"
-              light
-            />
+              light />
             <v-list-item
               v-for="(menuOption, index2) in section"
               :key="`item-${item.Id}-section-${index1}-option-${index2}`"
               :disabled="menuOption.disabled"
-              @click="menuOption.action"
-            >
+              @click="menuOption.action">
               <v-icon>{{ menuOption.icon }}</v-icon>
               <v-list-item-title class="text">
                 {{ menuOption.title }}
@@ -50,8 +46,7 @@
     <metadata-editor-dialog
       v-if="metadataDialog"
       v-model:dialog="metadataDialog"
-      :item-id="item.Id"
-    />
+      :item-id="item.Id" />
   </div>
 </template>
 

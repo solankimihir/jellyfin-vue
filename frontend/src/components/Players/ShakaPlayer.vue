@@ -13,16 +13,14 @@
       @pause="onPause"
       @play="onPlay"
       @ended="onEnd"
-      @waiting="onWaiting"
-    >
+      @waiting="onWaiting">
       <track
         v-if="subtitleTrack && !isAssSubtitle"
         kind="subtitles"
         default
         :label="subtitleTrack.label"
         :srcLang="subtitleTrack.srcLang"
-        :src="$axios.defaults.baseURL + subtitleTrack.src"
-      />
+        :src="$axios.defaults.baseURL + subtitleTrack.src" />
     </component>
   </div>
 </template>

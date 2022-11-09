@@ -8,8 +8,7 @@
       required
       item-title="Name"
       item-value="Value"
-      :items="culturesList"
-    />
+      :items="culturesList" />
     <v-btn color="primary" @click="setLanguage">
       {{ $t('next') }}
     </v-btn>

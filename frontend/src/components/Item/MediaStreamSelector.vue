@@ -9,8 +9,7 @@
     hide-details
     class="text-truncate"
     :items="selectItems"
-    @input="$emit('input', $event)"
-  >
+    @input="$emit('input', $event)">
     <template #selection="{ item }">
       {{ item.text.selection }}
     </template>
@@ -19,8 +18,7 @@
       <v-list-item
         v-bind="attrs"
         :lines="!!item.text.subtitle && 'two'"
-        v-on="on"
-      >
+        v-on="on">
         <v-avatar v-if="item.text.icon">
           <v-icon>{{ item.text.icon }}</v-icon>
         </v-avatar>

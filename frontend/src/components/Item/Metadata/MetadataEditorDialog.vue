@@ -4,14 +4,12 @@
     :model-value="dialog"
     :fullscreen="$vuetify.display.mobile"
     width="50vw"
-    @click:outside="$emit('update:dialog', false)"
-  >
+    @click:outside="$emit('update:dialog', false)">
     <metadata-editor
       v-model:force-refresh="forceRefresh"
       :item-id="itemId"
       @cancel="close"
-      @save="close"
-    />
+      @save="close" />
   </v-dialog>
 </template>
 

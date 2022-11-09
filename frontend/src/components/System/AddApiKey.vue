@@ -2,8 +2,7 @@
   <v-dialog
     :model-value="addingNewKey"
     :width="width"
-    @click:outside="() => (addingNewKey = false)"
-  >
+    @click:outside="() => (addingNewKey = false)">
     <v-col class="pa-0 add-key-dialog">
       <v-card>
         <v-card-title>{{ $t('settings.apiKeys.addApiKey') }}</v-card-title>
@@ -12,8 +11,7 @@
             <v-text-field
               v-model="newKeyAppName"
               variant="outlined"
-              :label="$t('settings.apiKeys.appName')"
-            />
+              :label="$t('settings.apiKeys.appName')" />
             <v-btn color="primary" :loading="loading" @click="addApiKey">
               {{ $t('confirm') }}
             </v-btn>

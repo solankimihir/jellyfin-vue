@@ -9,8 +9,7 @@
     variant="filled"
     flat
     hide-details
-    single-line
-  />
+    single-line />
 </template>
 
 <script lang="ts">

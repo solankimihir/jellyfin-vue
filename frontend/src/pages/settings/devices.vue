@@ -5,15 +5,13 @@
         v-if="devices"
         color="error"
         class="ml-a"
-        @click="deleteAllDevices"
-      >
+        @click="deleteAllDevices">
         {{ $t('settings.devices.deleteAll') }}
       </v-btn>
       <v-btn
         rel="noreferrer noopener"
         href="https://jellyfin.org/docs/general/server/devices.html"
-        target="_blank"
-      >
+        target="_blank">
         {{ $t('settings.help') }}
       </v-btn>
     </template>
@@ -46,8 +44,7 @@
           :selected-device="selectedDevice"
           :is-dialog="true"
           @close-dialog="closeDialog"
-          @delete-selected="deleteSelectedDevice"
-        />
+          @delete-selected="deleteSelectedDevice" />
       </v-dialog>
     </template>
   </settings-page>

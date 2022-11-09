@@ -2,8 +2,7 @@
   <div>
     <v-checkbox
       v-model="allowRemoteAccess"
-      :label="$t('wizard.allowRemoteAccess')"
-    />
+      :label="$t('wizard.allowRemoteAccess')" />
     <v-checkbox v-model="enableUPNP" :label="$t('enableUPNP')" />
     <v-btn color="secondary" @click="$emit('previous-step')">
       {{ $t('previous') }}

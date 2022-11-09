@@ -7,8 +7,7 @@
             v-if="auth.currentUser"
             :user="auth.currentUser"
             :size="40"
-            rounded
-          />
+            rounded />
         </template>
       </app-bar-button-layout>
     </template>
@@ -19,8 +18,7 @@
             v-if="auth.currentUser"
             :user="auth.currentUser"
             :size="40"
-            rounded
-          />
+            rounded />
         </v-avatar>
         <v-list-item-title class="text-body-1">
           {{ auth.currentUser.Name }}
@@ -34,8 +32,7 @@
       <v-list-item
         v-for="(item, index) in menuItems"
         :key="`bottomMenuItems-${index}`"
-        @click="item.action"
-      >
+        @click="item.action">
         <v-icon size="small">{{ item.icon }}</v-icon>
         <v-list-item-title>{{ item.title }}</v-list-item-title>
       </v-list-item>

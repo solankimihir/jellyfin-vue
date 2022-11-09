@@ -13,15 +13,13 @@
     min-height="25em"
     max-height="25em"
     :z-index="500"
-    class="menu"
-  >
+    class="menu">
     <!-- eslint-disable-next-line vue/no-template-shadow -->
     <template #activator="{ on: menu, attrs }">
       <app-bar-button-layout
         :custom-listener="taskList.length ? menu : undefined"
         :color="buttonColor"
-        v-bind="attrs"
-      >
+        v-bind="attrs">
         <template #icon>
           <v-progress-circular v-if="!buttonColor" indeterminate size="24" />
           <v-icon v-else>mdi-check</v-icon>
@@ -44,8 +42,7 @@
                 "
                 :model-value="task.progress"
                 rotate="-90"
-                size="24"
-              />
+                size="24" />
               <v-icon v-else>mdi-check</v-icon>
             </v-list-item-action>
           </v-list-item>

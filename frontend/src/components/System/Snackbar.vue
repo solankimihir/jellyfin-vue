@@ -4,8 +4,7 @@
     app
     :color="snackbar.color"
     location="bottom"
-    location="left"
-  >
+    location="left">
     {{ snackbar.message }}
   </v-snackbar>
 </template>

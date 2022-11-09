@@ -8,8 +8,7 @@
         variant="text"
         rounded
         v-bind="attrs"
-        v-on="on"
-      >
+        v-on="on">
         {{ $t('filter') }}
         <v-icon end>mdi-menu-down</v-icon>
       </v-btn>
@@ -19,8 +18,7 @@
         class="my-2"
         icon
         v-bind="attrs"
-        v-on="on"
-      >
+        v-on="on">
         <v-icon>mdi-filter-variant</v-icon>
       </v-btn>
     </template>
@@ -30,12 +28,10 @@
           <v-list-group
             v-model="selectedStatusFilters"
             multiple
-            @change="emitFilterChange"
-          >
+            @change="emitFilterChange">
             <template
               v-for="(status, statusIndex) in statusFilters"
-              :key="`status-${statusIndex}`"
-            >
+              :key="`status-${statusIndex}`">
               <v-list-item :value="status.name">
                 <template #default="{ active }">
                   <v-list-item-title v-text="status.label" />
@@ -54,18 +50,15 @@
           collectionInfo.CollectionType === 'movies' ||
           collectionInfo.CollectionType === 'tvshows'
         "
-        :title="$t('features')"
-      >
+        :title="$t('features')">
         <v-list dense class="filter-content">
           <v-list-group
             v-model="selectedFeatureFilters"
             multiple
-            @change="emitFilterChange"
-          >
+            @change="emitFilterChange">
             <template
               v-for="(feature, featureIndex) in featureFilters"
-              :key="`feature-${featureIndex}`"
-            >
+              :key="`feature-${featureIndex}`">
               <v-list-item :value="feature.name">
                 <template #default="{ active }">
                   <v-list-item-title v-text="feature.label" />
@@ -84,12 +77,10 @@
           <v-list-group
             v-model="selectedGenreFilters"
             multiple
-            @change="emitFilterChange"
-          >
+            @change="emitFilterChange">
             <template
               v-for="(genre, genreIndex) in genreFilters"
-              :key="`genre-${genreIndex}`"
-            >
+              :key="`genre-${genreIndex}`">
               <v-list-item :value="genre">
                 <template #default="{ active }">
                   <v-list-item-title v-text="genre" />
@@ -105,18 +96,15 @@
       </v-expansion-panel>
       <v-expansion-panel
         v-if="ratingFilters.length > 0"
-        :title="$t('parentalRatings')"
-      >
+        :title="$t('parentalRatings')">
         <v-list dense class="filter-content">
           <v-list-group
             v-model="selectedRatingFilters"
             multiple
-            @change="emitFilterChange"
-          >
+            @change="emitFilterChange">
             <template
               v-for="(rating, ratingIndex) in ratingFilters"
-              :key="`rating-${ratingIndex}`"
-            >
+              :key="`rating-${ratingIndex}`">
               <v-list-item :value="rating">
                 <template #default="{ active }">
                   <v-list-item-title v-text="rating" />
@@ -135,18 +123,15 @@
           collectionInfo.CollectionType === 'movies' ||
           collectionInfo.CollectionType === 'tvshows'
         "
-        :title="$t('videoTypes')"
-      >
+        :title="$t('videoTypes')">
         <v-list dense class="filter-content">
           <v-list-group
             v-model="selectedTypeFilters"
             multiple
-            @change="emitFilterChange"
-          >
+            @change="emitFilterChange">
             <template
               v-for="(type, typeIndex) in typeFilters"
-              :key="`type-${typeIndex}`"
-            >
+              :key="`type-${typeIndex}`">
               <v-list-item :value="type.name">
                 <template #default="{ active }">
                   <v-list-item-title v-text="type.label" />
@@ -165,12 +150,10 @@
           <v-list-group
             v-model="selectedYearFilters"
             multiple
-            @change="emitFilterChange"
-          >
+            @change="emitFilterChange">
             <template
               v-for="(year, yearIndex) in yearFilters"
-              :key="`year-${yearIndex}`"
-            >
+              :key="`year-${yearIndex}`">
               <v-list-item :value="year">
                 <template #default="{ active }">
                   <v-list-item-title v-text="year" />

@@ -19,74 +19,62 @@
             <v-text-field
               v-model="metadata.Name"
               variant="outlined"
-              :label="$t('metadata.title')"
-            />
+              :label="$t('metadata.title')" />
             <v-text-field
               v-model="metadata.OriginalTitle"
               variant="outlined"
-              :label="$t('originalTitle')"
-            />
+              :label="$t('originalTitle')" />
             <v-text-field
               v-model="metadata.ForcedSortName"
               variant="outlined"
-              :label="$t('sortTitle')"
-            />
+              :label="$t('sortTitle')" />
             <v-text-field
               v-model="metadata.Taglines"
               variant="outlined"
-              :label="$t('tagline')"
-            />
+              :label="$t('tagline')" />
             <v-textarea
               v-model="metadata.Overview"
               variant="outlined"
               no-resize
               rows="4"
-              :label="$t('overview')"
-            />
+              :label="$t('overview')" />
           </v-tab>
           <v-tab value="details">
             <date-input
               :value="dateCreated"
               :label="$t('dateAdded')"
-              @update:date="(value) => saveDate('DateCreated', value)"
-            />
+              @update:date="(value) => saveDate('DateCreated', value)" />
             <v-row>
               <v-col sm="6" cols="12">
                 <v-text-field
                   v-model="metadata.CommunityRating"
                   variant="outlined"
-                  :label="$t('communityRating')"
-                />
+                  :label="$t('communityRating')" />
               </v-col>
               <v-col sm="6" cols="12">
                 <v-text-field
                   v-model="metadata.CriticRating"
                   variant="outlined"
-                  :label="$t('criticRating')"
-                />
+                  :label="$t('criticRating')" />
               </v-col>
             </v-row>
 
             <date-input
               :value="premiereDate"
               :label="$t('releaseDate')"
-              @update:date="(value) => saveDate('PremiereDate', value)"
-            />
+              @update:date="(value) => saveDate('PremiereDate', value)" />
             <v-text-field
               v-model="metadata.ProductionYear"
               variant="outlined"
-              :label="$t('year')"
-            />
+              :label="$t('year')" />
             <v-text-field
               v-model="metadata.OfficialRating"
               variant="outlined"
-              :label="$t('parentalRating')"
-            />
+              :label="$t('parentalRating')" />
             <v-text-field
               v-model="metadata.CustomRating"
               variant="outlined"
-              :label="$t('customRating')"
-            />
+              :label="$t('customRating')" />
             <v-combobox
               v-model="metadata.Genres"
               v-model:search-input="search"
@@ -95,8 +83,7 @@
               hide-selected
               multiple
               variant="outlined"
-              small-chips
-            >
+              small-chips>
               <template #no-data>
                 <v-list-item>
                   <v-list-item-title>
@@ -113,8 +100,7 @@
               hide-selected
               multiple
               variant="outlined"
-              small-chips
-            >
+              small-chips>
               <template #no-data>
                 <v-list-item>
                   <v-list-item-title>
@@ -137,13 +123,11 @@
               <v-list-item
                 v-for="(item, i) in metadata.People"
                 :key="`${item.Id}-${i}`"
-                @click="handlePersonEdit(item)"
-              >
+                @click="handlePersonEdit(item)">
                 <v-avatar>
                   <v-img
                     v-if="item.PrimaryImageTag"
-                    :src="`${$axios.defaults.baseURL}/Items/${item.Id}/Images/Primary`"
-                  />
+                    :src="`${$axios.defaults.baseURL}/Items/${item.Id}/Images/Primary`" />
                   <v-icon v-else class="bg-grey-darken-3">mdi-account</v-icon>
                 </v-avatar>
                 <v-list-item-title>
@@ -171,15 +155,13 @@
       :class="{
         'justify-end': !$vuetify.display.mobile,
         'justify-center': $vuetify.display.mobile
-      }"
-    >
+      }">
       <v-btn
         variant="flat"
         width="8em"
         color="secondary"
         class="mr-1"
-        @click="$emit('cancel')"
-      >
+        @click="$emit('cancel')">
         {{ $t('cancel') }}
       </v-btn>
       <v-btn
@@ -187,8 +169,7 @@
         width="8em"
         color="primary"
         :loading="loading"
-        @click="saveMetadata"
-      >
+        @click="saveMetadata">
         {{ $t('save') }}
       </v-btn>
     </v-card-actions>
@@ -196,8 +177,7 @@
       v-model:dialog="dialog"
       :person="person"
       @update:person="handlePersonUpdate"
-      @update:dialog="handleDialogUpdate"
-    />
+      @update:dialog="handleDialogUpdate" />
   </v-card>
 </template>
 

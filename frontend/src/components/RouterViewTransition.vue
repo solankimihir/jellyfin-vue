@@ -8,8 +8,7 @@
           isRoot
             ? 'router-view-root-transition-wrapper'
             : 'router-view-transition-wrapper'
-        "
-      >
+        ">
         <component :is="Component" />
       </div>
     </transition>

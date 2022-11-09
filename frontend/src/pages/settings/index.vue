@@ -3,15 +3,15 @@
     <v-row class="pt-4">
       <v-col cols="12" offset-lg="1" md="5" lg="4" class="py-4">
         <div
-          v-if="!isEmpty(systemInfo) && auth.currentUser.Policy.IsAdministrator"
-        >
+          v-if="
+            !isEmpty(systemInfo) && auth.currentUser.Policy.IsAdministrator
+          ">
           <v-img
             class="logo"
             contain
             src="/icon.png"
             height="100px"
-            :alt="$t('jellyfinLogo')"
-          />
+            :alt="$t('jellyfinLogo')" />
           <!-- TODO: Wait for Vuetify 3.1 -->
           <!-- <v-simple-table class="mb-4 pb-2 information">
             <tbody>
@@ -49,8 +49,7 @@
               :key="userItem.name"
               nuxt
               :to="userItem.link"
-              :disabled="!userItem.link"
-            >
+              :disabled="!userItem.link">
               <v-avatar>
                 <v-icon v-text="userItem.icon" />
               </v-avatar>
@@ -68,16 +67,14 @@
             v-for="(adminSection, index) in adminSections"
             :key="`admin-section-${index}`"
             lines="two"
-            class="mb-4"
-          >
+            class="mb-4">
             <v-list-group>
               <v-list-item
                 v-for="adminItem in adminSection"
                 :key="adminItem.name"
                 nuxt
                 :to="adminItem.link"
-                :disabled="!adminItem.link"
-              >
+                :disabled="!adminItem.link">
                 <v-avatar>
                   <v-icon v-text="adminItem.icon" />
                 </v-avatar>

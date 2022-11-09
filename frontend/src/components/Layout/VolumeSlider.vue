@@ -5,8 +5,7 @@
       icon
       fab
       size="small"
-      @click="playbackManager.toggleMute"
-    >
+      @click="playbackManager.toggleMute">
       <v-icon>{{ icon }}</v-icon>
     </v-btn>
     <v-slider
@@ -16,8 +15,7 @@
       max="100"
       :model-value="playbackManager.isMuted ? 0 : playbackManager.currentVolume"
       validate-on="blur"
-      @input="onVolumeChange"
-    />
+      @input="onVolumeChange" />
   </div>
 </template>
 
