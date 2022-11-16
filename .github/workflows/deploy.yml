@@ -34,10 +34,23 @@ jobs:
           branch: ${{ inputs.branch != '' && inputs.branch || github.event.workflow_run.head_branch }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get PR number ⬇️
+        uses: dawidd6/action-download-artifact@v2.24.2
+        if: ${{ github.event.workflow_run.event == 'pull_request' }}
+        with:
+          run_id: ${{ github.event.workflow_run.id }}
+          name: PR_context
+
+      - name: Set PR number and SHA environment variable
+        if: ${{ github.event.workflow_run.event == 'pull_request' }}
+        run: |
+          echo "pr_number=$(cat PR_number)" >> $GITHUB_ENV
+          echo "pr_sha=$(cat PR_sha)" >> $GITHUB_ENV
+
       - name: Create job summary
         id: msg
         env:
-          COMMIT: ${{ github.event.workflow_run.head_commit.id }}
+          COMMIT: ${{ env.pr_sha }}
           PREVIEW_URL: ${{ steps.cf.outputs.url != '' && steps.cf.outputs.url || 'Not available' }}
           DEPLOY_STATUS: ${{ steps.cf.outputs.url != '' && '✅ Deployed!' || '❌ Failure. Check workflow logs for more info' }}
         # EOF is needed for multiline environment variables in a GitHub Actions context
@@ -55,19 +68,6 @@ jobs:
           echo "$COMPOSED_MSG" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      - name: Get PR number ⬇️
-        uses: dawidd6/action-download-artifact@v2.24.2
-        if: ${{ github.event.workflow_run.event == 'pull_request' }}
-        with:
-          run_id: ${{ github.event.workflow_run.id }}
-          name: PR_number
-
-      - name: Set PR number environment variable
-        if: ${{ github.event.workflow_run.event == 'pull_request' }}
-        run: |
-          PR_NUMBER=$(cat PR_number)
-          echo "pr_number=$PR_NUMBER" >> $GITHUB_ENV
-
       - name: Update job summary in PR comment
         uses: thollander/actions-comment-pull-request@v1.5.0
         if: ${{ github.event.workflow_run.event == 'pull_request' }}
@@ -75,4 +75,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.JF_BOT_TOKEN }}
           message: ${{ env.msg }}
           pr_number: ${{ env.pr_number }}
+          pr_sha: ${{ env.pr_sha }}
           comment_includes: '<!--- CFPages deployment marker --->'
